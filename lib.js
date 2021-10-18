@@ -31,15 +31,11 @@ function mean2(numbers){
         sumx += pair[0];
         sumy += pair[1];
     });
-    let result = [sumx/pairnum, sumy/pairnum];
+    let result = [(sumx/pairnum).toFixed(2), (sumy/pairnum).toFixed(2)];
 
-    console.log(roundtoSecond(result[0]), roundtoSecond(result[1]));
+    console.log(result[0], result[1]);
     return result;
 };
-
-function roundtoSecond(num){
-    return Math.round(num*100)/100;
-}
 
 function med2(numbers){
     let pairs = cartesian(numbers);
