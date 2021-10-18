@@ -25,7 +25,7 @@ switch(command){
         result = lib.avg(numbers);
         break;
     case "max":
-        result = lib.avg(numbers);
+        result = lib.max(numbers);
         break;
     default:
         console.log("Wrong command!!!!");
