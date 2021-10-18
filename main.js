@@ -16,6 +16,8 @@ if(numbers.some((n)=>isNaN(n))){
 }
 
 
+pairCheck(numbers);
+
 let result;
 switch(command){
     case "sum":
@@ -27,9 +29,33 @@ switch(command){
     case "max":
         result = lib.max(numbers);
         break;
+    case "mean2":
+        result = lib.mean2(numbers);
+        break;
+    case "med2":
+        result = lib.med2(numbers);
+        break;
+    case "pareto":
+        result = lib.pareto(numbers);
+        break;
     default:
         console.log("Wrong command!!!!");
         process.exit(1);
 }
 
-console.log(result);
+
+function wrongpair(){
+    console.log("Something went wrong! perheps wrong numbers");
+    process.exit(1);
+}
+
+function pairCheck(numbers){
+    if(numbers.length % 2){
+        wrongpair();
+    }
+    numbers.forEach(num => {
+        if(num === NaN){
+            wrongpair();
+        }
+    })
+};
