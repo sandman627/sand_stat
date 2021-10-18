@@ -16,26 +16,30 @@ if(numbers.some((n)=>isNaN(n))){
 }
 
 
-pairCheck(numbers);
-
 let result;
 switch(command){
     case "sum":
         result = lib.sum(numbers);
+        console.log(result)
         break;
     case "avg":
         result = lib.avg(numbers);
+        console.log(result)
         break;
     case "max":
         result = lib.max(numbers);
+        console.log(result)
         break;
     case "mean2":
+        pairCheck(numbers);
         result = lib.mean2(numbers);
         break;
     case "med2":
+        pairCheck(numbers);
         result = lib.med2(numbers);
         break;
     case "pareto":
+        pairCheck(numbers);
         result = lib.pareto(numbers);
         break;
     default:
@@ -44,18 +48,9 @@ switch(command){
 }
 
 
-function wrongPair(){
-    console.log("Something went wrong! perheps wrong numbers");
-    process.exit(1);
-}
-
 function pairCheck(numbers){
     if(numbers.length % 2){
-        wrongPair();
-    }
-    numbers.forEach(num => {
-        if(num === NaN){
-            wrongPair();
-        }
-    })
+        console.log("Something went wrong! perheps wrong numbers");
+        process.exit(1);
+    };
 };
