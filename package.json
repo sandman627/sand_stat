@@ -1,0 +1,25 @@
+{
+  "name": "sand_stat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandman627/sand_stat.git"
+  },
+  "bin": {
+    "stat": "./main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandman627/sand_stat/issues"
+  },
+  "homepage": "https://github.com/sandman627/sand_stat#readme",
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
