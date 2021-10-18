@@ -64,7 +64,7 @@ function med2(numbers){
             result = pairs[step];
         };
     };
-    console.log();
+    console.log(result[0], result[1]);
     return result;
 };
 
