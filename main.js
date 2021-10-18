@@ -44,18 +44,18 @@ switch(command){
 }
 
 
-function wrongpair(){
+function wrongPair(){
     console.log("Something went wrong! perheps wrong numbers");
     process.exit(1);
 }
 
 function pairCheck(numbers){
     if(numbers.length % 2){
-        wrongpair();
+        wrongPair();
     }
     numbers.forEach(num => {
         if(num === NaN){
-            wrongpair();
+            wrongPair();
         }
     })
 };
